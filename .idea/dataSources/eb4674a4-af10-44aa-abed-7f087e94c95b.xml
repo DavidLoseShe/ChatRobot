@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ChatRobot@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="chatrobot">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="active"/>
+    <schema id="4" parent="1" name="ajaxlogin"/>
+    <schema id="5" parent="1" name="auroratech"/>
+    <schema id="6" parent="1" name="book"/>
+    <schema id="7" parent="1" name="down"/>
+    <schema id="8" parent="1" name="fenye"/>
+    <schema id="9" parent="1" name="hospital"/>
+    <schema id="10" parent="1" name="information_schema"/>
+    <schema id="11" parent="1" name="mysql"/>
+    <schema id="12" parent="1" name="outdoorparty"/>
+    <schema id="13" parent="1" name="sshe"/>
+    <schema id="14" parent="1" name="studentactivity"/>
+    <schema id="15" parent="1" name="test"/>
+    <schema id="16" parent="1" name="workermanage"/>
+    <schema id="17" parent="1" name="zidong"/>
+    <table id="18" parent="2" name="user"/>
+    <column id="19" parent="18" name="id">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="18" name="email">
+      <Position>2</Position>
+      <Comment>用户邮箱</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="18" name="password">
+      <Position>3</Position>
+      <Comment>用户密码</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="18" name="username">
+      <Position>4</Position>
+      <Comment>用户昵称</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="18" name="role">
+      <Position>5</Position>
+      <Comment>用户身份</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="18" name="status">
+      <Position>6</Position>
+      <Comment>用户状态</Comment>
+      <DataType>int(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="18" name="regTime">
+      <Position>7</Position>
+      <Comment>注册时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="18" name="regIp">
+      <Position>8</Position>
+      <Comment>注册IP</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="27" parent="18" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="29" parent="18" name="email">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
